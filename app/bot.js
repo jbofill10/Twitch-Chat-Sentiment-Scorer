@@ -1,7 +1,5 @@
 const TwitchBot = require('twitch-bot')
 
-var query = require('./perspective/query')
-query.query('hello')
 require('dotenv').config()
 
 
@@ -20,5 +18,11 @@ Bot.on('error', err => {
 })
  
 Bot.on('message', chatter => {
-    //console.log(chatter.message)
+    message = {
+      name: chatter.username,
+      displayName: chatter.display_name,
+      text: chatter.message,
+    }
+
+    console.log(message)
 })
