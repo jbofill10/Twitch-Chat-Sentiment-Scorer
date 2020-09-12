@@ -3,7 +3,6 @@ const {Client} = require('pg')
 
 require('dotenv').config()
 
-console.log(process.env.PSQL_CONNECTIONSTRING)
 const client = new Client({
   connectionString: process.env.PSQL_CONNECTIONSTRING
 })
